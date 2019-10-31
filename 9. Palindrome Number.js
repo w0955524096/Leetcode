@@ -1,0 +1,1 @@
+/** * @param {number} x * @return {boolean} */var isPalindrome = function(y) {    let out=true    let x=y+""    for(let i=0;i<parseInt((x+"").length/2);i++)    {        if(x[i]!=x[x.length-i-1])        {            out=false            break;        }    }    if(x<0)        out=false    return out;};
