@@ -1,0 +1,1 @@
+/** * @param {number[]} A * @return {number} */var peakIndexInMountainArray = function(A) {    let out=0    for(i in A)        if(A[i]>A[out])            out=i    return out;};
