@@ -3,24 +3,24 @@
  * @return {string[]}
  */
 var printVertically = function (s) {
-  let SplitS = s.split(' ')
+  let splitStr = s.split(' ')
 
-  SplitS.sort(function (a, b) { return b.length - a.length })
+  splitStr.sort(function (a, b) { return b.length - a.length })
 
-  const InLen = SplitS[0].length
+  const innerLen = splitStr[0].length
 
-  const OutLen = SplitS.length
+  const outerLen = splitStr.length
 
-  const Out = new Array(InLen).fill('')
+  const out = new Array(innerLen).fill('')
 
-  SplitS = s.split(' ')
+  splitStr = s.split(' ')
 
-  for (let i = 0; i < InLen; i++) {
-    for (let j = 0; j < OutLen; j++) {
-      if (!SplitS[j][i]) { Out[i] += ' ' } else { Out[i] += SplitS[j][i] }
+  for (let i = 0; i < innerLen; i++) {
+    for (let j = 0; j < outerLen; j++) {
+      if (!splitStr[j][i]) { out[i] += ' ' } else { Out[i] += splitStr[j][i] }
     }
-    Out[i] = Out[i].replace(/([\s]*$)/g, '')
+    out[i] = out[i].replace(/([\s]*$)/g, '')
   }
 
-  return Out
+  return out
 }
